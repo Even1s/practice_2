@@ -6,8 +6,8 @@ namespace task_1
     {
         public static void Main()
         {
-            // FirstTask();
-            // SecondTask();
+            FirstTask();
+            SecondTask();
             ThirdTask();
         }
 
