@@ -47,13 +47,13 @@ internal static class NumbersProgram
                 case "F":
                     Console.Clear();
                     Console.Write("Write number: ");
-                    numbers.SetFirst(int.Parse(Console.ReadLine() ?? string.Empty));
+                    numbers.SetFirst(int.Parse(Console.ReadLine() ?? "0"));
                     Console.Clear();
                     break;
                 case "S":
                     Console.Clear();
                     Console.Write("Write number: ");
-                    numbers.SetSecond(int.Parse(Console.ReadLine() ?? string.Empty));
+                    numbers.SetSecond(int.Parse(Console.ReadLine() ?? "0"));
                     Console.Clear();
                     break;
                 case "Q":

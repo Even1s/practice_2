@@ -47,13 +47,13 @@ internal static class TrainProgram
                 case "D":
                     Console.Clear();
                     Console.Write("Write Destination: ");
-                    train.Destination = Console.ReadLine() ?? string.Empty;
+                    train.Destination = Console.ReadLine() ?? "";
                     Console.Clear();
                     break;
                 case "N":
                     Console.Clear();
                     Console.Write("Write Train Number: ");
-                    train.TrainNumber = int.Parse(Console.ReadLine() ?? string.Empty);
+                    train.TrainNumber = int.Parse(Console.ReadLine() ?? "0");
                     Console.Clear();
                     break;
                 case "T":

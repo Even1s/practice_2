@@ -49,7 +49,7 @@ internal static class StudentProgram
                 case "N":
                     Console.Clear();
                     Console.Write("Write Last Name: ");
-                    student.LastName = Console.ReadLine() ?? string.Empty;
+                    student.LastName = Console.ReadLine() ?? "";
                     Console.Clear();
                     break;
                 case "B":
@@ -62,7 +62,7 @@ internal static class StudentProgram
                 case "G":
                     Console.Clear();
                     Console.Write("Write Group: ");
-                    student.Group = int.Parse(Console.ReadLine() ?? string.Empty);
+                    student.Group = int.Parse(Console.ReadLine() ?? "0");
                     Console.Clear();
                     break;
                 case "P":
