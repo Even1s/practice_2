@@ -11,6 +11,7 @@ public static class Program
             Console.WriteLine("[T] - Train");
             Console.WriteLine("[N] - Numbers");
             Console.WriteLine("[C] - Counter");
+            Console.WriteLine("[D] - Destructible");
             Console.WriteLine("[Q] - Finish");
             string? command = Console.ReadLine();
             switch (command)
@@ -30,6 +31,10 @@ public static class Program
                 case "C":
                     Console.Clear();
                     CounterProgram.Run();
+                    continue;
+                case "D":
+                    Console.Clear();
+                    DestructibleProgram.Run();
                     continue;
                 case "Q":
                     Console.Clear();
