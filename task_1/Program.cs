@@ -42,7 +42,7 @@ namespace task_1
             Console.Write("Введите массив: ");
             int[]? wroteArray = Console.ReadLine()?.Split(' ').ToArray().Select(int.Parse).ToArray();
             Console.Write("Введите число: ");
-            int target = int.Parse(Console.ReadLine() ?? string.Empty);
+            int target = int.Parse(Console.ReadLine() ?? "0");
             List<int[]> filteredArray = new List<int[]>();
             foreach (var array in Combination(0, [], wroteArray))
             {
