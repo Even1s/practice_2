@@ -9,6 +9,7 @@ public static class Program
             Console.WriteLine("Programs:");
             Console.WriteLine("[S] - Student");
             Console.WriteLine("[T] - Train");
+            Console.WriteLine("[N] - Numbers");
             Console.WriteLine("[Q] - Finish");
             string? command = Console.ReadLine();
             switch (command)
@@ -21,11 +22,15 @@ public static class Program
                     Console.Clear();
                     TrainProgram.Run();
                     continue;
+                case "N":
+                    Console.Clear();
+                    NumbersProgram.Run();
+                    continue;
                 case "Q":
+                    Console.Clear();
                     Console.WriteLine("Finish");
                     break;
                 default:
-                    Console.Clear();
                     Console.WriteLine("ERROR");
                     continue;
             }

@@ -1,9 +1,10 @@
 namespace task_2;
-internal static class TrainProgram
+
+internal static class NumbersProgram
 {
     public static void Run()
     {
-        var train = new Train();
+        var numbers = new Numbers();
         while (true)
         {
             Console.WriteLine("Commands:");
@@ -15,11 +16,11 @@ internal static class TrainProgram
             {
                 case "E":
                     Console.Clear();
-                    Edit(train);
+                    Edit(numbers);
                     continue;
                 case "P":
                     Console.Clear();
-                    Print(train);
+                    Print(numbers);
                     continue;
                 case "Q":
                     Console.Clear();
@@ -32,37 +33,27 @@ internal static class TrainProgram
             break;
         }
     }
-    private static void Edit(Train train)
+    private static void Edit(Numbers numbers)
     {
         while (true)
         {
-            Console.WriteLine("Properties:");
-            Console.WriteLine("[D] - Destination");
-            Console.WriteLine("[N] - Train Number");
-            Console.WriteLine("[T] - Departure Time");
+            Console.WriteLine("Numbers:");
+            Console.WriteLine("[F] - First");
+            Console.WriteLine("[S] - Second");
             Console.WriteLine("[Q] - Exit");
             string? property = Console.ReadLine();
             switch (property)
             {
-                case "D":
+                case "F":
                     Console.Clear();
-                    Console.Write("Write Destination: ");
-                    train.Destination = Console.ReadLine() ?? string.Empty;
-                    Console.Clear();
-                    break;
-                case "N":
-                    Console.Clear();
-                    Console.Write("Write Train Number: ");
-                    train.TrainNumber = int.Parse(Console.ReadLine() ?? string.Empty);
+                    Console.Write("Write number: ");
+                    numbers.SetFirst(int.Parse(Console.ReadLine() ?? string.Empty));
                     Console.Clear();
                     break;
-                case "T":
+                case "S":
                     Console.Clear();
-                    Console.Write("Write Departure Date (dd.mm.yyyy): ");
-                    int[]? date = Console.ReadLine()?.Split('.').ToArray().Select(int.Parse).ToArray();
-                    Console.Write("Write Departure Time (hh:mm): ");
-                    int[]? time = Console.ReadLine()?.Split(':').ToArray().Select(int.Parse).ToArray();
-                    train.SetDeparture(date[0], date[1], date[2], time[0], time[1]);
+                    Console.Write("Write number: ");
+                    numbers.SetSecond(int.Parse(Console.ReadLine() ?? string.Empty));
                     Console.Clear();
                     break;
                 case "Q":
@@ -77,35 +68,43 @@ internal static class TrainProgram
         }
     }
 
-    static void Print(Train train)
+    static void Print(Numbers numbers)
     {
         while (true)
         {
-            Console.WriteLine("Properties:");
-            Console.WriteLine("[D] - Destination");
-            Console.WriteLine("[N] - Train Number");
-            Console.WriteLine("[T] - Departure Time");
+            Console.WriteLine("Print:");
+            Console.WriteLine("[F] - First");
+            Console.WriteLine("[S] - Second");
+            Console.WriteLine("[P] - Sum");
+            Console.WriteLine("[M] - Maximal");
             Console.WriteLine("[Q] - Exit");
             string? property = Console.ReadLine();
             switch (property)
             {
-                case "D":
+                case "F":
                     Console.Clear();
-                    Console.WriteLine($"Destination: {train.Destination}");
+                    numbers.PrintFirst();
                     Console.Write("Press Enter");
                     Console.ReadLine();
                     Console.Clear();
                     break;
-                case "N":
+                case "S":
                     Console.Clear();
-                    Console.WriteLine($"Train Number: {train.TrainNumber}");
+                    numbers.PrintSecond();
                     Console.Write("Press Enter");
                     Console.ReadLine();
                     Console.Clear();
                     break;
-                case "T":
+                case "P":
                     Console.Clear();
-                    Console.WriteLine($"Departure Time: {train.DepartureTime}");
+                    Console.WriteLine($"Sum: {numbers.Sum()}");
+                    Console.Write("Press Enter");
+                    Console.ReadLine();
+                    Console.Clear();
+                    break;
+                case "M":
+                    Console.Clear();
+                    Console.WriteLine($"Maximal: {numbers.Maximal()}");
                     Console.Write("Press Enter");
                     Console.ReadLine();
                     Console.Clear();
