@@ -12,7 +12,7 @@ internal static class NumbersProgram
             Console.WriteLine("[P] - Print");
             Console.WriteLine("[Q] - Exit");
             string? command = Console.ReadLine();
-            switch (command)
+            switch (command.ToUpper())
             {
                 case "E":
                     Console.Clear();
@@ -42,7 +42,7 @@ internal static class NumbersProgram
             Console.WriteLine("[S] - Second");
             Console.WriteLine("[Q] - Exit");
             string? property = Console.ReadLine();
-            switch (property)
+            switch (property.ToUpper())
             {
                 case "F":
                     Console.Clear();
@@ -79,7 +79,7 @@ internal static class NumbersProgram
             Console.WriteLine("[M] - Maximal");
             Console.WriteLine("[Q] - Exit");
             string? property = Console.ReadLine();
-            switch (property)
+            switch (property.ToUpper())
             {
                 case "F":
                     Console.Clear();

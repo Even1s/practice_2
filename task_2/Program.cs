@@ -14,7 +14,7 @@ public static class Program
             Console.WriteLine("[D] - Destructible");
             Console.WriteLine("[Q] - Finish");
             string? command = Console.ReadLine();
-            switch (command)
+            switch (command.ToUpper())
             {
                 case "S":
                     Console.Clear();
