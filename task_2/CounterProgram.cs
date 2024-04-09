@@ -17,7 +17,7 @@ internal static class CounterProgram
             Console.WriteLine("[P] - Print");
             Console.WriteLine("[Q] - Exit");
             string? command = Console.ReadLine();
-            switch (command)
+            switch (command.ToUpper())
             {
                 case "U":
                     Console.Clear();

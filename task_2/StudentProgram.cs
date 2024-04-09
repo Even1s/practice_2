@@ -11,7 +11,7 @@ internal static class StudentProgram
             Console.WriteLine("[P] - Print");
             Console.WriteLine("[Q] - Exit");
             string? command = Console.ReadLine();
-            switch (command)
+            switch (command.ToUpper())
             {
                 case "E":
                     Console.Clear();
@@ -44,7 +44,7 @@ internal static class StudentProgram
             Console.WriteLine("[P] - Performanse");
             Console.WriteLine("[Q] - Exit");
             string? property = Console.ReadLine();
-            switch (property)
+            switch (property.ToUpper())
             {
                 case "N":
                     Console.Clear();
@@ -95,7 +95,7 @@ internal static class StudentProgram
             Console.WriteLine("[P] - Performanse");
             Console.WriteLine("[Q] - Exit");
             string? property = Console.ReadLine();
-            switch (property)
+            switch (property.ToUpper())
             {
                 case "N":
                     Console.Clear();
