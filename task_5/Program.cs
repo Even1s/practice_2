@@ -218,7 +218,7 @@ public static class Program
         string birthday = Console.ReadLine() ?? string.Empty;
         try
         {
-            DatabaseRequests.AddDriverQuery(name, surname, DateTime.Parse(birthday));
+            DatabaseRequests.AddDriverQuery(name, surname, DateTime.Parse($"{birthday} 0:00:00"));
         }
         catch (FormatException e)
         {
